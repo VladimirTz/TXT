@@ -4,19 +4,145 @@ $ /d/GIT/txt1
 $ git init TXT
  2. Клонировать репозиторий TXT на локальный компьютер:
 $ git clone https://github.com/VladimirTz/TXT.git
- 3. Внутри локального TXT создать файл “new.txt”.
- 4. Добавить файл под гит.
- 5. Закоммитить файл.
- 6. Отправить файл на внешний GitHub репозиторий.
- 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
- 8. Отправить изменения на внешний репозиторий.
- 9. Создать файл preferences.txt
- 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
- 11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
- 12. Сделать коммит в одну строку.
- 13. Отправить сразу 2 файла на внешний репозиторий.
- 14. На веб интерфейсе создать файл bug_report.txt.
- 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
- 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
- 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
- 18. Синхронизировать внешний и локальный репозиторий TXT
+ 3. Внутри локального TXT создать файл “new.txt”:
+$ cd txt
+/d/git/txt1/txt (main)
+$ touch new.txt
+ 4. Добавить файл под гит:
+$ git status
+$ git add new.txt
+ 5. Закоммитить файл:
+$ git status
+$ git commit -m "add two files"
+ 6. Отправить файл на внешний GitHub репозиторий:
+$ git status
+$ git push	
+$ git status
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT:
+$ cat new.txt
+$ vim new.txt
+About me:
+
+Name:Vladimir,
+Last_name: Tzelobanoff,
+Patronymic: Alexsandrovich,
+Age: 27,
+Pet_number: 2,
+Salary:1000 $
+нажать Esc
+:wq (для выхода из редактирования).
+ 8. Отправить изменения на внешний репозиторий:
+$ git status
+$ git add new.txt
+$ git status
+$ git commit -m 'update file new.txt'
+$ git status
+$ git push
+$ git status
+ 9. Создать файл preferences.txt:
+touch preferences.txt
+$ git status
+
+ 10. В файл preferences.txt добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT:
+$ cat preferences.txt
+$ vim preferences.txt
+Me prefer:
+
+Muvie: Professor,
+Soap_opera: Interns,
+Food : Meat,
+Season: Summer,
+Country: Italy.
+нажать Esc
+:wq (для выхода из редактирования).
+$ cat preferences.txt
+Me prefer:
+
+Muvie: Professor,
+Soap_opera: Interns,
+Food : Meat,
+Season: Summer,
+Country: Italy.
+
+ 11. Создать файл skils.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT:
+$ touch skils.txt; $ git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        preferences.txt
+        skils.txt
+nothing added to commit but untracked files present (use "git add" to track)
+$ cat preferences.txt
+$ vim preferences.txt
+Вносим данные
+нажать Esc
+:wq (для выхода из редактирования).
+$ cat skils.txt
+Skills:
+
+1. Базовая теория (Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC.
+2. Что такое клиент-серверная архитектура.
+3. HTTP Методы запросов на сервер.
+4. Коды ответов HTTP сервера.
+5. Структуры HTTP запросов и ответов.
+6. Что такое JSON, XML. Их структура.
+7. Тестирование API через Postman (JS, автотесты API).
+8. Снятие и чтение логов c внешнего сервера.
+9. Снифинг http web трафика через Charles и Fiddler.
+10. Dev Tools веб браузеров (Google Chrome, FireFox).
+11. VPN. (Как работает, зачем нужен, как использовать, варианты инструментов).
+12. Мобильное тестирование.
+13. Особенность iOS, Android, гайдлайны.
+15. Сборка Android приложений на Android Studio.
+16. ADB (управление андройд девайсами).
+17. Настройка прокси и vpn на iOS и Android.
+18. Перехват (сниффинг) мобильного трафика через Charles и Fiddler на iOS и Android.
+19. Командная строка (terminal) Linux (копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса).
+20. Основы bash скриптинг, автоматизация рутинных задач на сервере.
+21. Доступ к удалённым серверам.
+22. Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join).
+23. База данных Postgres (установка, настройка и использование).
+24. Нереляционная база данных Redis (установка, настройка и использование).
+25. Нагрузочное тестирование в Jmeter.
+26. Методология разработки Scrum.
+27. Python. (Изучение основ. Создание клиент серверного приложения).
+
+
+ 12. Сделать коммит в одну строку:
+$ git add preferences.txt skils.txt; git status; git commit -m 'add two files preferences.txt skils.txt'; git status
+
+warning: in the working copy of 'preferences.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'skils.txt', LF will be replaced by CRLF the next time Git touches it
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   preferences.txt
+        new file:   skils.txt
+
+[main 88aad26] add two files preferences.txt skils.txt
+ 2 files changed, 35 insertions(+)
+ create mode 100644 preferences.txt
+ create mode 100644 skils.txt
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+
+ 13. Отправить сразу 2 файла на внешний репозиторий:
+$ git push; git status
+ 14. На веб интерфейсе создать файл bug_report.txt:
+GitHub (Add file - Create new file - Fill in "Name your file")
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе:
+GitHub (Write a commit massage and press "Commit new file")
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT:
+GitHub (Go to file "bug_report.txt" - Edit this file - Fill in the file)
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе:
+GitHub (Write a commit massage and press "Commit changes")
+ 18. Синхронизировать внешний и локальный репозиторий TXT:
+$ git pull
