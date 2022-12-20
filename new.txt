@@ -1,0 +1,8 @@
+About me:
+
+Name:Vladimir,
+Last_name: Tzelobanoff,
+Patronymic: Alexsandrovich,
+Age: 27,
+Pet_number: 2,
+Salary:1000 $	
