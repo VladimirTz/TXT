@@ -1,4 +1,4 @@
-# TXT
+# TXT [DZgithubtxt.txt](<https://github.com/VladimirTz/TXT/blob/main/DZgithubtxt.txt>)
 1. Создать внешний репозиторий c названием TXT.
  2. Клонировать репозиторий TXT на локальный компьютер.
  3. Внутри локального TXT создать файл “new.txt”.
